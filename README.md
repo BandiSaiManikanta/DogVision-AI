@@ -5,8 +5,11 @@ This project is a professional web application that predicts dog breeds from upl
 ---
 
 ## 👨‍💻 Team Members
-• Bandi Sai Manikanta – Full Stack Developer  
-• Ramya Pushadapu – Data Science & Analytics  
+  Bandi Sai Manikanta 
+  Nalabothula Venkata Karthik
+  Mohammad Vaseem Khadhar
+  Peddiboyina Bhanu Sai Teja
+
 
 ---
 
