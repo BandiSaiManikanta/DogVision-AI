@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="center">Analytics Dashboard</h1>
+<a href="/export"><button class="btn">Download Report</button></a>
+
+<canvas id="lineChart"></canvas>
+<canvas id="pieChart"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+fetch("/analytics-data").then(res=>res.json()).then(data=>{
+ new Chart(document.getElementById("lineChart"),{
+   type:'line',
+   data:{labels:data.dates,
+   datasets:[{data:data.date_values,borderColor:'#ff6b6b'}]}
+ });
+ new Chart(document.getElementById("pieChart"),{
+   type:'pie',
+   data:{labels:data.breeds,
+   datasets:[{data:data.breed_values}]}
+ });
+});
+</script>
+{% endblock %}

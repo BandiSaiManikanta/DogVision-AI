@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="result-card">
+  <h1>Prediction Result</h1>
+  <img src="{{ img_path }}" class="preview">
+  <h2>{{ prediction }}</h2>
+  <a href="/predict"><button class="btn">Scan Another</button></a>
+</div>
+{% endblock %}

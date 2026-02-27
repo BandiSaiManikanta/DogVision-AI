@@ -1,0 +1,91 @@
+body{margin:0;font-family:Segoe UI;background:#f4f6fb}
+nav{display:flex;justify-content:space-between;padding:15px 40px;background:#1f3c88;color:white}
+nav a{color:white;margin-left:20px;text-decoration:none}
+.hero{text-align:center;padding:120px;background:linear-gradient(45deg,#1f3c88,#ff6b6b);color:white}
+.btn{padding:12px 22px;background:#ff6b6b;border:none;color:white;border-radius:6px}
+.features{display:flex;justify-content:center;margin-top:-40px}
+.card{background:white;padding:30px;margin:20px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+.dashboard{display:flex;justify-content:center;margin-top:50px}
+.stat{background:white;padding:40px;margin:20px;border-radius:10px;text-align:center}
+.upload-box,.result-card{text-align:center;margin:80px}
+.preview{width:250px;border-radius:10px;margin:15px}
+footer{text-align:center;padding:20px;background:#eee;margin-top:50px}
+.center{text-align:center;margin-top:50px}
+.light{
+ background:white;
+ color:black;
+}
+canvas{
+ width:80%!important;
+ margin:40px auto;
+ display:block;
+ background:#1e293b;
+ padding:20px;
+ border-radius:10px;
+}
+/* ---------- MOBILE RESPONSIVE DESIGN ---------- */
+
+/* Make navbar stack on mobile */
+@media (max-width: 768px){
+  nav{
+    flex-direction: column;
+    text-align:center;
+    padding:15px;
+  }
+
+  nav div{
+    margin-top:10px;
+  }
+
+  nav a{
+    display:block;
+    margin:10px 0;
+  }
+}
+
+/* Hero section mobile */
+@media (max-width:768px){
+  .hero{
+    padding:80px 20px;
+  }
+}
+
+/* Cards stack vertically */
+@media (max-width:768px){
+  .features,
+  .dashboard,
+  .pricing,
+  .stats{
+    flex-direction:column;
+    align-items:center;
+  }
+}
+
+/* Chart resizing */
+@media (max-width:768px){
+  canvas{
+    width:95% !important;
+  }
+}
+
+/* Upload box mobile */
+@media (max-width:768px){
+  .upload-box,
+  .result-card,
+  .page{
+    margin:30px 15px;
+  }
+}
+
+/* Buttons full width on mobile */
+@media (max-width:768px){
+  .btn{
+    width:100%;
+    margin-top:10px;
+  }
+}
+
+/* Tables scroll on mobile */
+.table-container{
+  overflow-x:auto;
+}

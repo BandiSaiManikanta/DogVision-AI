@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="upload-box">
+  <h2>Upload Dog Image</h2>
+  <form action="/result" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" onchange="preview(event)" required>
+    <img id="preview" class="preview">
+    <br>
+    <button class="btn">Predict Breed</button>
+  </form>
+</div>
+
+<script>
+function preview(event){
+  document.getElementById("preview").src = URL.createObjectURL(event.target.files[0]);
+}
+</script>
+{% endblock %}

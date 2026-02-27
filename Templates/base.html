@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DogVision AI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body id="body">
+
+<nav>
+<h2>DogVision AI</h2>
+<div>
+<a href="/">Home</a>
+<a href="/predict">Try AI</a>
+<a href="/dashboard">Dashboard</a>
+<a href="/export">Export</a>
+<button onclick="toggleTheme()">🌙</button>
+<select onchange="changeLang(this.value)">
+<option value="en">EN</option>
+<option value="te">TE</option>
+</select>
+</div>
+</nav>
+
+{% block content %}{% endblock %}
+
+<script>
+function toggleTheme(){
+ document.body.classList.toggle("light");
+}
+function changeLang(lang){
+ alert("Language switched to "+lang+" (demo)");
+}
+</script>
+
+</body>
+</html>
